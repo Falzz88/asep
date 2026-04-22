@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Parking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🚗 Smart Parking System</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Input Kendaraan</h3>
+        <div class="form-group">
+            <input type="text" id="plat" placeholder="Nomor Plat">
+
+            <select id="jenis">
+                <option value="Motor">Motor (Rp 2.000/jam)</option>
+                <option value="Mobil">Mobil (Rp 5.000/jam)</option>
+            </select>
+
+            <!-- ✅ UPGRADE: dari select jadi input bebas -->
+            <input type="number" id="durasi" min="1" placeholder="Durasi (jam)">
+
+            <button class="btn-primary" onclick="tambah()">Tambah</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Kendaraan Aktif</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plat</th>
+                    <th>Jenis</th>
+                    <th>Durasi</th>
+                    <th>Masuk</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="list"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
